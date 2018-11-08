@@ -9,8 +9,8 @@
     src: url(./fonts/AgendaLightExtraCondensed.ttf) format("truetype");
 }
 .wrapper {
-  width: 1000px;
-  height: 550px;
+  width: 1080px;
+  height: 605px;
   display: flex;
   justify-content: space-between;
   margin-left: auto;
@@ -18,19 +18,21 @@
   margin-top:30px;
 }
 .sidebar {
-  width: 200px;
+  width: 18%;
   height: 100%;
-  border:1px solid #ddd;
+  border:1px solid #ccc;
+  background-color: #e6e6e6;
 }
 .main-div  {
   position: relative;
-  width: 800px;
+  width: 82%;
   height: 100%;
-  border:1px solid #ddd;
+  border:1px solid #ccc;
   border-left: none;
   background-image: url(https://www.sare-infographic.com/images/farm-background.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .sidebar-btn {
   width: 97%;
@@ -85,6 +87,80 @@
 
 
 .sidebar-panel.active {
-  height:425px;
+  height:478px;
   transition: all 5s;
+}
+.manage_icons {
+  position: absolute;
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+.manage_icons.one {
+  top:222px;
+  left:144px;
+}
+
+.manage_icons.two {
+  top:369px;
+  left:402px;
+}
+
+.manage_icons.three {
+  top:226px;
+  right:406px;
+}
+
+.manage_icons.four {
+  bottom:272px;
+  right:220px;
+}
+
+.manage_icons.five {
+  bottom:319px;
+  right:105px;
+}
+
+.manage_icons.six {
+  top:102px;
+  right:361px;
+}
+
+.manage_icons.seven {
+  bottom:235px;
+  left:90px;
+}
+.manage_icons.eight {
+  bottom:204px;
+  left:140px;
+}
+
+.manage_icons.nine {
+  bottom:174px;
+  left:195px;
+}
+
+.manage_icons.ten {
+  bottom:144px;
+  left:250px;
+}
+
+.manage_icons.eleven {
+  bottom:114px;
+  left:300px;
+}
+
+.manage_icons.twelve {
+  bottom:84px;
+  left:355px;
+}
+
+.manage_icons.thirteen {
+  bottom:49px;
+  left:410px;
+}
+
+.manage_icons.fourteen {
+  bottom:21px;
+  left:465px;
 }

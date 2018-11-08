@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 
 class ManageIcon extends Component {
 	
@@ -21,6 +21,8 @@ class ManageIcon extends Component {
 							className={this.props.cls} 
 							onMouseEnter={this.getDarkImage}
     					onMouseLeave={this.getLightImage}
+    					onClick={this.props.onClick}
+    					alt={this.props.id}
 				/>
 			)
 	}

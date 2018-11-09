@@ -57,6 +57,11 @@ class Infographic extends Component {
        		<div id="main_title">
             <h4>How Can You Improve Your Soil's Health?</h4>  
           </div>
+
+          <div className="desc_frame">
+            <div className="desc_frame_div"></div>
+          </div>
+
          {
           this.state.icons.map((el) => {
               return(

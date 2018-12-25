@@ -22,14 +22,147 @@ class Infographic extends Component {
     {src: "https://www.sare-infographic.com/images/arthropods_icon.png", id: "arthropods", cls: "manage_icons thirteen"},
     {src: "https://www.sare-infographic.com/images/organic_matter_icon.png", id: "organic_matter", cls: "manage_icons fourteen"}
     ], 
-    bool: false
+    bool: false, 
+    circleBackground: null,
+    topIcon: null, 
+    title: null, 
+    color: "rgb(136, 55, 96)"
   }
 
+  scanTitle(target) {
+     switch(target) {
+      case "cover_crops": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_cc_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_cc_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(136, 55, 96)"
+        }
+      break;
+      case "crop_rotation": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_cr_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_cr_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(136, 55, 96)"
+        }
+      break; 
+      case "conservation_tillage": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_ct_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_ct_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(136, 55, 96)"
+        }
+      break;
+      case "compost": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_c_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_c_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(136, 55, 96)"
+        }
+      break;
+      case "soil_assessment": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_sa_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_sa_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(136, 55, 96)"
+        }
+      break;
+      case "crop_liverstock": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_ls_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_ls_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join('-') + " Integration",
+          color: "rgb(136, 55, 96)"
+        }
+      break;
+      case "microorganisms": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_mo_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_mo_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(67, 135, 190)"
+        }
+      break;
+      case "nematodes": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_n_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_n_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(67, 135, 190)"
+        }
+      break;
+      case "earthworms": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_ew_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_ew_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(67, 135, 190)"
+        }
+      break;
+      case "protozoa": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_ps_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_ps_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(67, 135, 190)"
+        }
+      break;
+      case "bacteria": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_b_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_b_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(67, 135, 190)"
+        }
+      break;
+      case "fungi": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_f_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_f_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(67, 135, 190)"
+        }
+      break;
+      case "arthropods": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_ar_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_ar_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(67, 135, 190)"
+        }
+      break;
+      case "organic_matter": 
+        return {
+          bool: true, 
+          circleBackground: "http:\//sare-infographic.com/images/bb_om_bg.png", 
+          topIcon: "http:\//sare-infographic.com/images/bb_om_title_icon.png", 
+          title: target.split('_').map((el) => { return el[0].toUpperCase() + el.slice(1)}).join(' '), 
+          color: "rgb(67, 135, 190)"
+        }
+      break;
+    }
+  }
 
-  onClickIcon() {
-    this.setState({
-      bool: true
-    })
+  
+  onClickIcon(e) {
+    this.setState(this.scanTitle(e.target.alt))
   }
 
   changeBool() {
@@ -49,7 +182,7 @@ class Infographic extends Component {
             this.state.bool ?  
 
             <Fragment>
-              <Cover onClick={this.changeBool.bind(this)} />
+              <Cover onClick={this.changeBool.bind(this)} circleBackground={this.state.circleBackground} topIcon={this.state.topIcon} title={this.state.title} color={this.state.color} />
             </Fragment>
 
              : null
@@ -70,7 +203,7 @@ class Infographic extends Component {
                       id={el.id} 
                       src={el.src} 
                       cls={el.cls} 
-                      onClick={this.onClickIcon.bind(this)}
+                      onClick={this.onClickIcon.bind(this)}                      
                   />
                    )
           })
